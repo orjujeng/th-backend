@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("/auth")
 @RestController
-public class authHandler {
+public class authController {
 
     @GetMapping("/poc")
     public String getPocInfo() {

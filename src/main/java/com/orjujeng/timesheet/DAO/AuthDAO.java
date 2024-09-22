@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 @Mapper
-public interface LoginDAO {
+public interface AuthDAO {
     AuthMemberDO selectAuthMemberByEmailAndPw(@Param("email") String email,@Param("password") String password);
+    int updateAuthMemberByEmail(@Param("email") String email);
+
+    int insertAuthMemberInfo(@Param("email") String email);
 }

@@ -1,10 +1,11 @@
 package com.orjujeng.timesheet.Vi;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-public class LoginParam {
+
+import java.io.Serializable;
+
+public class LoginParam implements Serializable {
     public LoginParam(String email, String password) {
         this.email = email;
         this.password = password;

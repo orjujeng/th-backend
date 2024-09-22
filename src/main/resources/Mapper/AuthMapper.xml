@@ -1,7 +1,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.orjujeng.timesheet.DAO.LoginDAO">
+<mapper namespace="com.orjujeng.timesheet.DAO.AuthDAO">
     <select id="selectAuthMemberByEmailAndPw" resultType="com.orjujeng.timesheet.DO.AuthMemberDO">
         select * from auth_member
         <where>
@@ -13,5 +13,12 @@
             </if>
         </where>
     </select>
+    <update id="updateAuthMemberByEmail" >
+        update auth_member set password = '1234567' where email = #{email}
+    </update>
 
+    <insert id="insertAuthMemberInfo" useGeneratedKeys="true">
+        insert into auth_member(email,password,join_date) values
+        (#{email},'1234567',CURRENT_TIMESTAMP());
+    </insert>
 </mapper>

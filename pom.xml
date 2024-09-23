@@ -53,6 +53,10 @@
 			<artifactId>spring-session-data-redis</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId> <!-- 或使用 lettuce -->
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>

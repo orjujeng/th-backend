@@ -16,9 +16,15 @@ import org.springframework.web.bind.annotation.*;
 public class DashboradController {
     @Autowired
     DashboardInfo dashboardInfo;
-    @RequestMapping(value = "/",method = RequestMethod.POST)
+    @RequestMapping(value = "/dashborad",method = RequestMethod.POST)
     public Response Dashborad(@RequestBody @Valid DashboradParam input) {
         DashboardVo output = dashboardInfo.getDashboardInfo(input);
         return Response.success(output);
+    }
+
+    @RequestMapping(value = "/clearCache",method = RequestMethod.GET)
+    public Response ClearCache() {
+        dashboardInfo.clearDashboradInfoCahe();
+        return Response.success("success");
     }
 }

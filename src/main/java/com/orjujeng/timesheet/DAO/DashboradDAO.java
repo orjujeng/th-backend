@@ -4,7 +4,9 @@ import com.orjujeng.timesheet.DO.DashboradInfoDO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 @Mapper
 public interface DashboradDAO {
-    DashboradInfoDO seletctDashboradInfoWithPeriod(@Param("month") String month);
+    List<DashboradInfoDO> seletctDashboradInfoWithPeriod(@Param("month") String month);
 }

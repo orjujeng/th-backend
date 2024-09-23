@@ -1,8 +1,10 @@
 package com.orjujeng.timesheet.DO;
 
+import java.util.Date;
+
 public class DashboradInfoDO {
     private int id;
-    private String month;
+    private Date month;
     private int newMember;
     private int supportMember;
     private int supportProjects;
@@ -20,11 +22,11 @@ public class DashboradInfoDO {
         this.id = id;
     }
 
-    public String getMonth() {
+    public Date getMonth() {
         return month;
     }
 
-    public void setMonth(String month) {
+    public void setMonth(Date month) {
         this.month = month;
     }
 

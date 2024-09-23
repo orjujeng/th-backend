@@ -6,4 +6,5 @@ import com.orjujeng.timesheet.Vo.DashboardVo;
 
 public interface DashboardInfo {
     DashboardVo getDashboardInfo(DashboradParam input);
+    void clearDashboradInfoCahe();
 }

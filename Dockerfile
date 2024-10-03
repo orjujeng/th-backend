@@ -1,4 +1,4 @@
-FROM public.ecr.aws/amazoncorretto/amazoncorretto:11
+FROM public.ecr.aws/amazoncorretto/amazoncorretto:17
 EXPOSE 8080
 VOLUME /tmp
 ADD target/*.jar /app.jar
